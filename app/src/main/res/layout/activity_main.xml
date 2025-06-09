@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/locationSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,14 +25,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/location_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:drawableLeft="@drawable/loctaion"
 
         android:drawablePadding="15dp"
-        android:text=""
+        android:text="Dhaka"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,15 +47,17 @@
         android:layout_marginEnd="84dp"
         android:textSize="32sp"
         android:text="Today"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/location_name" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/current_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:textColor="@color/black"
         android:text="00:00°C "
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,17 +69,18 @@
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/location_name"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/sun" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="28sp"
+        android:textColor="@color/black"
         android:text="sunny"
         android:textAllCaps="true"
         android:textSize="24sp"
@@ -84,28 +88,28 @@
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
 
     <TextView
-        android:id="@+id/min_tmp"
+        android:id="@+id/feelslike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Min : 00:00°C"
+        android:text="Feels Like : 00:00°C"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/current_temp" />
 
-    <TextView
-        android:id="@+id/max_temp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Max : 00:00°C"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/min_tmp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/min_tmp"
-        app:layout_constraintTop_toBottomOf="@+id/min_tmp" />
+<!--    <TextView-->
+<!--        android:id="@+id/max_temp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Max : 00:00°C"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/min_tmp"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/min_tmp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/min_tmp" />-->
 
 
     <TextView
@@ -114,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="352dp"
         android:text="Sunday"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,6 +133,7 @@
         android:layout_marginTop="8dp"
         android:text="26 May 2025"
         android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -176,6 +182,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="70"
+                    android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
@@ -186,6 +193,7 @@
 
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
+                    android:textColor="@color/black"
                     android:text="Humidity" />
             </LinearLayout>
 
@@ -213,6 +221,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="34"
+                    android:textColor="@color/black"
                     android:textSize="19sp" />
 
                 <TextView
@@ -220,6 +229,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textColor="@color/black"
                     android:text="Wind Speed" />
             </LinearLayout>
 
@@ -246,8 +256,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Title 3"
                     android:textSize="21sp"
+                    android:text="1hr"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -255,7 +266,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Condition" />
+                    android:textColor="@color/black"
+                    android:text="Rain" />
             </LinearLayout>
 
             <!-- Bottom Left -->
@@ -283,15 +295,17 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="103422"
-                    android:textSize="21sp"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/sunrisetext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="Value 4" />
+                    android:text="Sunrise" />
             </LinearLayout>
 
             <!-- Bottom Middle -->
@@ -314,12 +328,13 @@
                     android:src="@drawable/sunset" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/sunsetValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="103243"
-                    android:textSize="21sp"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -327,6 +342,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textColor="@color/black"
 
                     android:text="Sunset" />
             </LinearLayout>
@@ -351,11 +367,12 @@
                     android:src="@drawable/sea" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/sea_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="100"
+                    android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
@@ -364,6 +381,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textColor="@color/black"
                     android:text="Sea" />
             </LinearLayout>
 
@@ -371,7 +389,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/ownertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Own By Ashik"
